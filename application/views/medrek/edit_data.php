@@ -68,7 +68,7 @@
 								<label>Tanggal Lahir</label>
 							<input type="date" name="ttl_pasien" id="ttl_pasien" value="<?php echo $ttl_pasien ?>" class="form-control" placeholder="(dd/mm/Y)" />
 								<label>Usia</label>
-							<input type="text" name="usia" id="usia" value="<?php echo $usia ?>" class="form-control" placeholder="Usia Pasien" />
+							<input type="text" name="usia" id="usia" value="<?php echo $usia ?>" class="form-control" placeholder="Usia Pasien" readonly />
 								<label>Alamat</label>
 							<textarea name="alamat_pasien" class="form-control" placeholder="Alamat Pasien"><?php echo $alamat_pasien?></textarea>
 								<label>Kota / Kabupaten</label>
