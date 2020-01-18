@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 13, 2020 at 03:22 AM
+-- Generation Time: Jan 18, 2020 at 12:16 PM
 -- Server version: 5.7.28-0ubuntu0.16.04.2
--- PHP Version: 7.0.33-0ubuntu0.16.04.7
+-- PHP Version: 7.0.33-0ubuntu0.16.04.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,29 @@ SET time_zone = "+00:00";
 --
 -- Database: `simrs_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `numbers`
+--
+
+CREATE TABLE `numbers` (
+  `n` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `numbers`
+--
+
+INSERT INTO `numbers` (`n`) VALUES
+(1),
+(2),
+(3),
+(4),
+(5),
+(6),
+(7);
 
 -- --------------------------------------------------------
 
@@ -39,9 +62,11 @@ CREATE TABLE `tb_dokter` (
 --
 
 INSERT INTO `tb_dokter` (`id_dokter`, `nama_dokter`, `spesialis`, `lokasi_praktek`, `jadwal_praktek`) VALUES
-(00000001, 'Rahman', 'Umum', 'Rs. Al-Ihsan Lt. 3', 'Senin, Rabu, Kamis'),
-(00000002, 'Reti', 'Mata', 'Rs. Al-Ihsan Lt. 3', 'Senin, Rabu, Jumat, Sabtu'),
-(00000003, 'Arnold', 'THT', 'Rs. Al-Ihsan Lt. 2', 'Selasa, Rabu, Jumat, Minggu');
+(00000001, 'Rahman', 'Umum', 'Rs. Al-Ihsan Lt. 3', 'Senin,Rabu,Kamis,Sabtu'),
+(00000002, 'Reti', 'Mata', 'Rs. Al-Ihsan Lt. 3', 'Senin,Rabu,Jumat,Sabtu'),
+(00000003, 'Arnold', 'THT', 'Rs. Al-Ihsan Lt. 2', 'Selasa,Rabu,Jumat,Minggu'),
+(00000004, 'm DEDE', 'Jantung', 'Rs. Al-Ihsan Lt. 1', 'Selasa,Sabtu'),
+(00000005, 'Ridwan', 'Umum', 'Rs. Al-Ihsan Lt. 1', 'Senin,Rabu,Kamis,Sabtu');
 
 -- --------------------------------------------------------
 
@@ -66,7 +91,8 @@ CREATE TABLE `tb_pasien` (
 INSERT INTO `tb_pasien` (`id_pasien`, `nama_pasien`, `j_kelamin`, `ttl_pasien`, `usia`, `alamat_pasien`, `kota_pasien`) VALUES
 (00000002, 'Fadli P', 'L', '1975-09-15', 44, 'Baleendah', 'Bandung'),
 (00000003, 'Ani S', 'P', '1975-11-12', 44, 'Banjaran', 'Bandung'),
-(00000006, 'Sulastri', 'P', '1998-01-01', 22, 'Bandung', 'Bandung');
+(00000006, 'Sulastri', 'P', '1998-01-01', 22, 'Bandung', 'Bandung'),
+(00000007, 'rio', 'L', '1997-12-01', 23, 'kp bojong malaka', 'Bandung');
 
 -- --------------------------------------------------------
 
@@ -90,8 +116,8 @@ CREATE TABLE `tb_rekmed` (
 
 INSERT INTO `tb_rekmed` (`no_medrek`, `id_pasien`, `keluhan`, `poli`, `id_dokter`, `penyakit`, `status`) VALUES
 (00000001, 00000001, 'Sakit Kepala, Badan Meriang, Pegel Linu', 'Umum', 00000001, NULL, 'Rawat Jalan'),
-(00000002, 00000002, 'Telinga Sakit, Pendengaran Kurang', 'Umum', 00000001, 'DBD', 'Rawat Inap'),
-(00000004, 00000006, 'Mata Buram', 'Mata', 00000002, '', 'Rawat Jalan');
+(00000004, 00000006, 'Mata Buram', 'Mata', 00000002, '', 'Rawat Jalan'),
+(00000005, 00000007, 'SAKIT KEPA', 'Umum', 00000001, '', 'Rawat Jalan');
 
 -- --------------------------------------------------------
 
@@ -154,17 +180,17 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_dokter`
 --
 ALTER TABLE `tb_dokter`
-  MODIFY `id_dokter` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_dokter` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tb_pasien`
 --
 ALTER TABLE `tb_pasien`
-  MODIFY `id_pasien` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pasien` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tb_rekmed`
 --
 ALTER TABLE `tb_rekmed`
-  MODIFY `no_medrek` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `no_medrek` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
