@@ -87,7 +87,6 @@
   </style>
 </head>
 <body>
-  <center><?php echo $this->session->flashdata('msg'); ?></center>
   <div id="card">
     <div id="card-content">
       <div id="card-title">
@@ -104,6 +103,7 @@
         <input id="submit-btn" type="submit" name="submit" value="LOGIN" />
       </form>
     </div>
+    <center><?php echo $this->session->flashdata('message'); ?></center>
   </div>
 </body>
 </html>

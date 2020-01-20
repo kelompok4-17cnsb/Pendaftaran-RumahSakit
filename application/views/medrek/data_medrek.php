@@ -36,7 +36,7 @@
 										<td><?php echo $data->nama_dokter; ?></td>
 										<td><?php if($data->penyakit){echo $data->penyakit;} else {echo "-";}?></td>
 										<td><?php echo $data->status; ?></td>
-										<td><a href="<?php echo base_url().'medrek/detail/'.$data->no_medrek?>"><i class="fa fa-book"></i></a> <a href="<?php echo base_url().'medrek/edit/'.$data->no_medrek?>"><i class="fa fa-pencil-square-o"></i></a> <a href="<?php echo base_url().'medrek/delete/'.$data->no_medrek?>"><i class="fa fa-remove"></i></a></td>
+										<td><a href="<?php echo base_url().'medrek/detail/'.$data->no_medrek?>"><i class="fa fa-book"></i></a> <a href="<?php echo base_url().'medrek/edit/'.$data->no_medrek?>"><i class="fa fa-pencil-square-o"></i></a> <a href="<?php echo base_url().'medrek/delete/'.$data->no_medrek?>" onclick="return confirm('Apakah data ini akan dihapus?')"><i class="fa fa-remove"></i></a></td>
 									</tr>
 								<?php endforeach ?>
 							</tbody>

@@ -90,7 +90,7 @@
 									<option value="Rawat Jalan">Rawat Jalan</option>
 									<option value="Rawat Inap">Rawat Inap</option>
 								</select><br/>
-								<button type="submit" class="btn btn-skin">TAMBAH DATA</button> <a href="<?php echo base_url('medrek')?>" class="btn btn-skin">Cancel</a>
+								<button type="submit" class="btn btn-skin" onclick="return confirm('Apakah data sudah sesuai?')">TAMBAH DATA</button> <a href="<?php echo base_url('medrek')?>" class="btn btn-skin">Cancel</a>
 							</div>
 						</form>
 					</div>

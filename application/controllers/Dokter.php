@@ -28,6 +28,7 @@ class Dokter extends CI_Controller {
 	function delete($id)
 	{
 		$this->Dokter_Model->delete($id);
+		$this->session->set_flashdata('message', 'Berhasil Menghapus Data');
 		redirect(base_url('dokter'));
 	}
 
@@ -60,7 +61,7 @@ class Dokter extends CI_Controller {
 				'jadwal_praktek' => implode(",",$this->input->post('jadwal_praktek', TRUE)),
 			);
 			$this->Dokter_Model->tambahData($data);
-			$this->session->set_flashdata('message', 'Tambah Data Success');
+			$this->session->set_flashdata('message', 'Berhasil Tambah Data');
 			redirect(base_url('dokter'));
 		}
 	}
@@ -86,7 +87,7 @@ class Dokter extends CI_Controller {
 				redirect(base_url('dokter'));
 			}
 		} else {
-			$message = $this->session->set_flashdata('msg', 'Sorry, you are not allowed to edit this data!');
+			$message = $this->session->set_flashdata('message', 'Sorry, you are not allowed to edit this data!');
 			redirect(base_url('dokter'), $message);
 		}
 	}
@@ -104,7 +105,7 @@ class Dokter extends CI_Controller {
 				'jadwal_praktek' => $this->input->post('jadwal_praktek', TRUE),
 			);
 			$this->Dokter_Model->updateData($this->input->post('id_dokter', TRUE), $data);
-			$this->session->set_flashdata('message', 'Update Data Success');
+			$this->session->set_flashdata('message', 'Berhasil Mengupdate Data');
 			redirect(base_url('dokter'));
 		}
 	}

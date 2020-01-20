@@ -159,7 +159,7 @@
 									<?php break;
 								} ?>
 							</select><br/>
-							<button type="submit" class="btn btn-skin">EDIT DATA</button> <a href="<?php echo base_url('medrek')?>" class="btn btn-skin">Cancel</a>
+							<button type="submit" class="btn btn-skin" onclick="return confirm('Apakah data sudah sesuai?')">EDIT DATA</button> <a href="<?php echo base_url('medrek')?>" class="btn btn-skin">Cancel</a>
 							</div>
 						</form>
 					</div>

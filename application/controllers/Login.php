@@ -30,6 +30,7 @@ class Login extends CI_Controller {
 			'password' => md5($password)
 			);
 		$cek = $this->User_Model->cek_login("tb_user",$where);
+		// var_dump($cek); die();
 		if($cek->num_rows() > 0){
  
 			$data_session = array(
@@ -42,7 +43,7 @@ class Login extends CI_Controller {
 			redirect(base_url(''));
  
 		}else{
-			$message = $this->session->set_flashdata('msg', 'Username / Password Salah!');
+			$message = $this->session->set_flashdata('message', 'Username / Password Salah!');
 			redirect(base_url('login'), $message);
 		}
 	}

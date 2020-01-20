@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 18, 2020 at 12:16 PM
+-- Generation Time: Jan 20, 2020 at 08:19 PM
 -- Server version: 5.7.28-0ubuntu0.16.04.2
 -- PHP Version: 7.0.33-0ubuntu0.16.04.9
 
@@ -66,7 +66,8 @@ INSERT INTO `tb_dokter` (`id_dokter`, `nama_dokter`, `spesialis`, `lokasi_prakte
 (00000002, 'Reti', 'Mata', 'Rs. Al-Ihsan Lt. 3', 'Senin,Rabu,Jumat,Sabtu'),
 (00000003, 'Arnold', 'THT', 'Rs. Al-Ihsan Lt. 2', 'Selasa,Rabu,Jumat,Minggu'),
 (00000004, 'm DEDE', 'Jantung', 'Rs. Al-Ihsan Lt. 1', 'Selasa,Sabtu'),
-(00000005, 'Ridwan', 'Umum', 'Rs. Al-Ihsan Lt. 1', 'Senin,Rabu,Kamis,Sabtu');
+(00000005, 'Ridwan', 'Umum', 'Rs. Al-Ihsan Lt. 1', 'Senin,Rabu,Kamis,Sabtu'),
+(00000006, 'Irfan', 'Bedah', 'Rs. Al-Ihsan Lt. 1', 'Senin,Kamis,Jumat');
 
 -- --------------------------------------------------------
 
@@ -116,8 +117,7 @@ CREATE TABLE `tb_rekmed` (
 
 INSERT INTO `tb_rekmed` (`no_medrek`, `id_pasien`, `keluhan`, `poli`, `id_dokter`, `penyakit`, `status`) VALUES
 (00000001, 00000001, 'Sakit Kepala, Badan Meriang, Pegel Linu', 'Umum', 00000001, NULL, 'Rawat Jalan'),
-(00000004, 00000006, 'Mata Buram', 'Mata', 00000002, '', 'Rawat Jalan'),
-(00000005, 00000007, 'SAKIT KEPA', 'Umum', 00000001, '', 'Rawat Jalan');
+(00000005, 00000007, 'SAKIT KEPALA', 'Umum', 00000001, '', 'Rawat Jalan');
 
 -- --------------------------------------------------------
 
@@ -138,8 +138,8 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id`, `username`, `password`, `nama_user`, `tgl_created`) VALUES
-(1, 'admin', 'c93ccd78b2076528346216b3b2f701e6', 'Administrator', '2019-12-28'),
-(2, 'pendaftaran', 'c93ccd78b2076528346216b3b2f701e6', 'Front Office', '2019-12-28');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', '2019-12-28'),
+(2, 'pendaftaran', 'beb9fb4aa4fbb632a8e029ca1c63e6af', 'Front Office', '2019-12-28');
 
 --
 -- Indexes for dumped tables
@@ -180,7 +180,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_dokter`
 --
 ALTER TABLE `tb_dokter`
-  MODIFY `id_dokter` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_dokter` int(8) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tb_pasien`
 --

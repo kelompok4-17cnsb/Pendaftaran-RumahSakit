@@ -35,7 +35,7 @@
 										<td><?php echo $data->usia; ?></td>
 										<td><?php echo $data->alamat_pasien; ?></td>
 										<td><?php echo $data->kota_pasien; ?></td>
-										<td><a href="<?php echo base_url().'pasien/edit/'.$data->id_pasien?>"><i class="fa fa-pencil-square-o"></i></a> <a href="<?php echo base_url().'pasien/delete/'.$data->id_pasien?>"><i class="fa fa-remove"></i></a></td>
+										<td><a href="<?php echo base_url().'pasien/edit/'.$data->id_pasien?>"><i class="fa fa-pencil-square-o"></i></a> <a href="<?php echo base_url().'pasien/delete/'.$data->id_pasien?>" onclick="return confirm('Apakah data ini akan dihapus?')"><i class="fa fa-remove"></i></a></td>
 									</tr>
 								<?php endforeach ?>
 							</tbody>

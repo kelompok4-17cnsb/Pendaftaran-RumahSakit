@@ -114,7 +114,7 @@
 								<?php elseif ($page == "edit"): ?>
 									<input type="text" name="jadwal_praktek" class="form-control" value="<?php echo $jadwal_praktek?>">
 									<?php endif ?><br/>
-									<button type="submit" class="btn btn-skin"><?php echo strtoupper($page)?> DATA</button> <a href="<?php echo base_url()?>dokter" class="btn btn-skin">Cancel</a>
+									<button type="submit" class="btn btn-skin" onclick="return confirm('Apakah data sudah sesuai?')"><?php echo strtoupper($page)?> DATA</button> <a href="<?php echo base_url()?>dokter" class="btn btn-skin">Cancel</a>
 								</form>
 							</div>
 						</div>

@@ -39,7 +39,7 @@
 							<textarea name="alamat_pasien" placeholder="Alamat Lengkap" class="form-control"><?php echo $alamat_pasien ?></textarea>
 							<label>Kota / Kabupaten</label>
 							<input type="text" name="kota_pasien" value="<?php echo $kota_pasien ?>" class="form-control" placeholder="Kota Pasien" /><br/>
-							<button type="submit" class="btn btn-skin"><?php echo $page;?> Data</button> <a href="<?php echo base_url('pasien')?>" class="btn btn-skin">Cancel</a>
+							<button type="submit" class="btn btn-skin" onclick="return confirm('Apakah data sudah sesuai?')"><?php echo $page;?> Data</button> <a href="<?php echo base_url('pasien')?>" class="btn btn-skin">Cancel</a>
 						</form>
 					</div>
 				</div>

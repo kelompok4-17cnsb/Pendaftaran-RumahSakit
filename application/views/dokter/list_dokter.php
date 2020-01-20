@@ -8,7 +8,8 @@
 		<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
 			<div class="panel panel-skin">
 				<div class="panel-heading">
-					<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Data Dokter</h3>
+					<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Data Dokter</h3> 
+						<?php echo $this->session->flashdata('message'); ?>
 						<?php if ($this->session->userdata('username') == "admin"){ ?>
 
 							<a href="<?php echo base_url()?>dokter/tambah" class="btn btn-skin" style="float: right;"><i class="fa fa-plus"></i></a>
@@ -16,7 +17,6 @@
 				</div>
 				<div class="panel-body">
 					<div class="row" style="padding: 0 20px">
-						<?php echo $this->session->flashdata('msg'); ?>
 						<table width="100%">
 							<thead>
 								<tr>
@@ -40,7 +40,7 @@
 										<td><?php echo $data->lokasi_praktek;?></td>
 										<td><?php echo $data->jadwal_praktek;?></td>
 										<?php if ($this->session->userdata('username') == "admin") {
-										?><td><a href="<?php echo base_url().'dokter/edit/'.$data->id_dokter?>"><i class="fa fa-pencil-square-o"></i></a> <a href="<?php echo base_url().'dokter/delete/'.$data->id_dokter?>"><i class="fa fa-remove"></i></a></td>
+										?><td><a href="<?php echo base_url().'dokter/edit/'.$data->id_dokter?>"><i class="fa fa-pencil-square-o"></i></a> <a href="<?php echo base_url().'dokter/delete/'.$data->id_dokter?>" onclick="return confirm('Apakah data ini akan dihapus?')"><i class="fa fa-remove"></i></a></td>
 									<?php }?>
 									</tr>
 								<?php endforeach ?>
